@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Адил & Каныкей — Той чакыруу · 09.10.2026</title>
+<meta name="description" content="Адил менен Каныкейдин никелешүү тоюна чакыруу. 9-октябрь, 2026-жыл, Бишкек. Силерди күтөбүз!">
+
+<!-- Open Graph / WhatsApp / Telegram превью -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Адил & Каныкей — Той чакыруу">
+<meta property="og:description" content="Силерди биздин бактылуу күнүбүзгө чакырабыз · 9-октябрь, 2026 · Бишкек">
+<meta property="og:locale" content="ky_KG">
+<meta name="theme-color" content="#5A1220">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon (эки жүрөк) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%235A1220'/%3E%3Cpath d='M16 25C10 20 6 16.5 6 12.5 6 9.5 8.3 7.5 11 7.5c1.8 0 3.5 1 5 3 1.5-2 3.2-3 5-3 2.7 0 5 2 5 5C31 16.5 22 20 16 25z' fill='none'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='%23E4C77A' font-family='serif'%3E%26%23128150;%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#5A1220;
+    --wine-deep:#3E0C16;
+    --gold:#B8892F;
+    --gold-light:#E4C77A;
+    --ivory:#F6EEE0;
+    --ink:#2B211C;
+    --sage:#6E7B58;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'PT Serif', serif;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .9s ease, transform .9s ease;
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    html{scroll-behavior:auto;}
+    .music-toggle .disc{ animation:none !important; }
+  }
+
+  .texture{
+    position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(184,137,47,0.05) 0, transparent 45%),
+      radial-gradient(circle at 80% 70%, rgba(90,18,32,0.05) 0, transparent 45%);
+  }
+
+  a{color:inherit;}
+  .eyebrow{
+    font-family:'Montserrat', sans-serif;
+    font-size:11px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+  }
+
+  /* ---------- ornament ---------- */
+  .ornament{ display:block; margin:22px auto; }
+  .ornament path{ stroke:var(--gold); }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:48px 24px;
+    background:
+      linear-gradient(180deg, rgba(62,12,22,0) 0%, rgba(62,12,22,0) 70%, var(--wine-deep) 100%),
+      var(--wine);
+    color:var(--ivory);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(228,199,122,0.035) 0 2px, transparent 2px 34px),
+      repeating-linear-gradient(25deg, rgba(228,199,122,0.035) 0 2px, transparent 2px 34px);
+    opacity:.6;
+  }
+  .hero-frame{
+    position:absolute; inset:18px;
+    border:1px solid rgba(228,199,122,0.45);
+    pointer-events:none;
+  }
+  .hero-frame::before, .hero-frame::after{
+    content:"";
+    position:absolute; width:34px; height:34px;
+    border:1px solid var(--gold-light);
+  }
+  .hero-frame::before{ top:-1px; left:-1px; border-right:none; border-bottom:none; }
+  .hero-frame::after{ bottom:-1px; right:-1px; border-left:none; border-top:none; }
+
+  .hero-content{ position:relative; z-index:1; max-width:640px; }
+  .hero .eyebrow{ color:var(--gold-light); }
+  .hero-names{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:clamp(52px, 12vw, 104px);
+    line-height:1.02;
+    margin-top:18px;
+    letter-spacing:.01em;
+  }
+  .hero-amp{
+    display:block;
+    font-style:italic;
+    font-weight:500;
+    color:var(--gold-light);
+    font-size:.4em;
+    margin:8px 0;
+  }
+  .hero-date{
+    margin-top:26px;
+    font-family:'Montserrat', sans-serif;
+    font-size:15px;
+    letter-spacing:.22em;
+    color:var(--gold-light);
+  }
+  .hero-verse{
+    margin-top:28px;
+    font-style:italic;
+    font-size:17px;
+    line-height:1.8;
+    color:rgba(246,238,224,0.86);
+    max-width:460px;
+    margin-left:auto; margin-right:auto;
+  }
+  .scroll-cue{
+    position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
+    font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:.3em;
+    color:rgba(228,199,122,0.7); text-transform:uppercase;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+  }
+  .scroll-cue span.line{ width:1px; height:34px; background:linear-gradient(var(--gold-light), transparent); animation:cueMove 1.8s ease-in-out infinite; }
+  @keyframes cueMove{ 0%,100%{opacity:.3} 50%{opacity:1} }
+
+  /* ---------- SECTION shell ---------- */
+  section{ position:relative; z-index:1; padding:96px 24px; }
+  .section-inner{ max-width:640px; margin:0 auto; text-align:center; }
+  .section-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-style:italic;
+    font-size:clamp(34px,6vw,46px);
+    color:var(--wine);
+    margin-top:8px;
+  }
+  .section-body{ font-size:17px; line-height:1.9; color:#4a3c33; margin-top:18px; }
+
+  /* ---------- STORY ---------- */
+  .story{ background:linear-gradient(180deg,#FBF6EC,var(--ivory)); }
+  .story .section-body{ max-width:520px; margin-left:auto; margin-right:auto; }
+
+  /* ---------- TOYDUN EELERI ---------- */
+  .hosts{ background:var(--wine); color:var(--ivory); }
+  .hosts .eyebrow{ color:var(--gold-light); }
+  .hosts .section-title{ color:var(--ivory); }
+  .hosts .ornament path{ stroke:var(--gold-light); }
+  .hosts-block{ margin-top:34px; }
+  .hosts-side + .hosts-side{ margin-top:30px; padding-top:30px; border-top:1px solid rgba(228,199,122,0.25); }
+  .hosts-side-label{
+    font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:.28em;
+    text-transform:uppercase; color:rgba(246,238,224,0.55); margin-bottom:16px;
+  }
+  .hosts-names{
+    display:flex; gap:56px; justify-content:center; flex-wrap:wrap;
+  }
+  .host{ min-width:130px; }
+  .host-name{
+    font-family:'Cormorant Garamond', serif; font-weight:600;
+    font-size:28px; color:var(--gold-light);
+  }
+  .host-role{
+    font-family:'Montserrat', sans-serif; font-size:11px; letter-spacing:.2em;
+    text-transform:uppercase; color:rgba(246,238,224,0.65); margin-top:6px;
+  }
+
+  /* ---------- DETAILS ---------- */
+  .details-grid{
+    margin-top:38px;
+    display:grid;
+    gap:1px;
+    background:rgba(90,18,32,0.14);
+    border:1px solid rgba(90,18,32,0.14);
+    grid-template-columns:1fr;
+  }
+  .detail-row{
+    background:var(--ivory);
+    padding:28px 22px;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .detail-label{
+    font-family:'Montserrat', sans-serif; font-size:11px; letter-spacing:.25em;
+    text-transform:uppercase; color:var(--gold);
+  }
+  .detail-value{
+    font-family:'Cormorant Garamond', serif; font-size:26px; font-weight:600; color:var(--wine);
+  }
+  .detail-sub{ font-size:14px; color:#6b5c4f; font-family:'PT Serif',serif; }
+  .map-btn{
+    margin-top:16px; align-self:flex-start;
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'Montserrat',sans-serif; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--wine); border:1px solid var(--wine); padding:12px 22px;
+    text-decoration:none; transition:background .25s ease, color .25s ease;
+  }
+  .map-btn:hover{ background:var(--wine); color:var(--ivory); }
+
+  /* ---------- PROGRAMMA ---------- */
+  .timeline{ margin-top:36px; text-align:left; max-width:420px; margin-left:auto; margin-right:auto; }
+  .tl-item{ display:flex; gap:20px; padding:16px 0; border-bottom:1px dashed rgba(90,18,32,0.18); }
+  .tl-item:last-child{ border-bottom:none; }
+  .tl-time{
+    font-family:'Cormorant Garamond',serif; font-weight:600; font-size:22px;
+    color:var(--wine); min-width:64px;
+  }
+  .tl-text{ font-size:16px; color:#4a3c33; align-self:center; }
+
+  /* ---------- COUNTDOWN ---------- */
+  .countdown{ display:flex; gap:22px; justify-content:center; margin-top:36px; flex-wrap:wrap; }
+  .cd-unit{ min-width:74px; }
+  .cd-num{ font-family:'Cormorant Garamond',serif; font-size:44px; font-weight:600; color:var(--wine); line-height:1; }
+  .cd-label{ font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#8a7a6b; margin-top:6px; }
+  .cd-done{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:26px; color:var(--wine); margin-top:36px; }
+
+  /* ---------- RSVP ---------- */
+  .rsvp{ background:linear-gradient(180deg, var(--ivory), #EFE4CE); }
+  .rsvp-form{
+    margin-top:36px; text-align:left;
+    background:#fff; border:1px solid rgba(90,18,32,0.12);
+    padding:34px 28px; display:flex; flex-direction:column; gap:20px;
+  }
+  .field label{
+    display:block; font-family:'Montserrat',sans-serif; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--wine); margin-bottom:8px;
+  }
+  .field input[type=text], .field input[type=number], .field textarea{
+    width:100%; border:none; border-bottom:1.5px solid rgba(90,18,32,0.25);
+    background:transparent; font-family:'PT Serif',serif; font-size:16px; padding:8px 2px;
+    color:var(--ink); outline:none; transition:border-color .2s ease;
+  }
+  .field input:focus, .field textarea:focus{ border-color:var(--gold); }
+  .radio-group{ display:flex; gap:14px; flex-wrap:wrap; }
+  .radio-pill{
+    flex:1; min-width:150px;
+    font-family:'Montserrat',sans-serif; font-size:13px;
+    border:1.5px solid rgba(90,18,32,0.25); padding:14px 12px; text-align:center;
+    cursor:pointer; transition:all .2s ease; user-select:none;
+  }
+  .radio-pill input{ position:absolute; opacity:0; width:0; height:0; }
+  .radio-pill.active{ background:var(--wine); border-color:var(--wine); color:var(--ivory); }
+  .radio-pill:focus-within{ border-color:var(--gold); }
+  .guests-field{ display:none; }
+  .guests-field.show{ display:block; }
+  .submit-btn{
+    margin-top:6px; font-family:'Montserrat',sans-serif; font-size:13px; letter-spacing:.18em;
+    text-transform:uppercase; background:var(--wine); color:var(--ivory); border:none;
+    padding:16px 20px; cursor:pointer; transition:background .25s ease;
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  }
+  .submit-btn:hover{ background:var(--wine-deep); }
+  .submit-btn svg{ width:18px; height:18px; }
+  .form-note{ font-size:12px; color:#8a7a6b; font-family:'Montserrat',sans-serif; letter-spacing:.02em; }
+  .success-msg{
+    display:none; margin-top:22px; padding:18px; border:1px dashed var(--gold);
+    font-family:'Montserrat',sans-serif; font-size:13px; color:var(--wine); text-align:center;
+  }
+  .success-msg.show{ display:block; }
+
+  footer{
+    text-align:center; padding:52px 24px 100px;
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-size:20px;
+    color:var(--wine);
+  }
+  footer .small{ display:block; font-family:'Montserrat',sans-serif; font-style:normal; font-size:10px;
+    letter-spacing:.25em; text-transform:uppercase; color:#a08e7c; margin-top:10px; }
+  .credit{
+    display:block; font-family:'Montserrat',sans-serif; font-style:normal; font-size:10px;
+    letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-top:22px;
+  }
+
+  /* ---------- MUSIC WIDGET ---------- */
+  .music-dock{
+    position:fixed; right:16px; bottom:16px; z-index:40;
+    display:flex; align-items:center; gap:0;
+  }
+  .music-toggle{
+    width:52px; height:52px; border-radius:50%;
+    background:var(--wine); border:1px solid var(--gold-light);
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; box-shadow:0 6px 18px rgba(62,12,22,0.35);
+    flex-shrink:0;
+  }
+  .music-toggle svg{ width:20px; height:20px; }
+  .music-toggle .disc{ animation:spin 5s linear infinite; animation-play-state:paused; transform-origin:center; }
+  .music-toggle.playing .disc{ animation-play-state:running; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .music-panel{
+    max-width:0; overflow:hidden; transition:max-width .35s ease;
+  }
+  .music-panel.open{ max-width:300px; margin-right:10px; }
+  .music-card{
+    background:var(--wine); border:1px solid var(--gold-light);
+    border-radius:12px; padding:12px 14px; box-shadow:0 6px 18px rgba(62,12,22,0.35);
+    width:270px;
+  }
+  .music-title{
+    font-family:'Cormorant Garamond',serif; font-style:italic; font-size:17px;
+    color:var(--gold-light); line-height:1.2; margin-bottom:2px;
+  }
+  .music-artist{
+    font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:rgba(246,238,224,0.6); margin-bottom:10px;
+  }
+  .music-card audio{ width:100%; height:36px; display:block; }
+
+  @media (max-width:560px){
+    .music-panel.open{ max-width:250px; }
+  }
+  @media (min-width:640px){
+    .details-grid{ grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="texture"></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-frame"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Никелешүү тою</div>
+    <svg class="ornament" width="140" height="34" viewBox="0 0 140 34" fill="none" aria-hidden="true">
+      <path d="M2 17 C 30 2, 40 32, 70 17 C 100 2, 110 32, 138 17" stroke-width="1.4" fill="none"/>
+      <circle cx="70" cy="17" r="3.4" fill="#E4C77A"/>
+    </svg>
+    <h1 class="hero-names">Адил <span class="hero-amp">жана</span> Каныкей</h1>
+    <div class="hero-date">09 &nbsp;•&nbsp; 10 &nbsp;•&nbsp; 2026</div>
+    <p class="hero-verse">Эки жүрөк бир тагдырга кошулган күнү.<br>Силерди биздин бактылуу күнүбүздүн күбөсү болууга чакырабыз.</p>
+  </div>
+  <div class="scroll-cue"><span class="line"></span>ылдый жылдырыңыз</div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="story reveal">
+  <div class="section-inner">
+    <div class="eyebrow">Кымбаттуу коноктор</div>
+    <svg class="ornament" width="120" height="28" viewBox="0 0 120 28" fill="none" aria-hidden="true">
+      <path d="M2 14 C 26 2, 34 26, 60 14 C 86 2, 94 26, 118 14" stroke-width="1.2" fill="none"/>
+    </svg>
+    <p class="section-body">
+      Биздин турмушубуздун эң жаркын күнүндө силерди жаныбызда көрүү —
+      биз үчүн чоң бакыт. Сүйүүдөн башталган жолубуз бүгүн үй-бүлө болуу
+      менен уланат. Ушул майрамды биз менен бирге бөлүшүүгө силерди чын
+      жүрөктөн чакырабыз.
+    </p>
+  </div>
+</section>
+
+<!-- ============ TOYDUN EELERI ============ -->
+<section class="hosts reveal">
+  <div class="section-inner">
+    <div class="eyebrow">Тойдун ээлери</div>
+    <svg class="ornament" width="120" height="28" viewBox="0 0 120 28" fill="none" aria-hidden="true">
+      <path d="M2 14 C 26 2, 34 26, 60 14 C 86 2, 94 26, 118 14" stroke-width="1.2" fill="none"/>
+    </svg>
+    <div class="hosts-block">
+      <div class="hosts-side">
+        <div class="hosts-side-label">Күйөө баланын ата-энеси</div>
+        <div class="hosts-names">
+          <div class="host">
+            <div class="host-name">Кубаныч</div>
+            <div class="host-role">Ата</div>
+          </div>
+          <div class="host">
+            <div class="host-name">Айша</div>
+            <div class="host-role">Эне</div>
+          </div>
+        </div>
+      </div>
+      <div class="hosts-side">
+        <div class="hosts-side-label">Колуктунун ата-энеси</div>
+        <div class="hosts-names">
+          <div class="host">
+            <div class="host-name">Нурлан</div>
+            <div class="host-role">Ата</div>
+          </div>
+          <div class="host">
+            <div class="host-name">Гүлмира</div>
+            <div class="host-role">Эне</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DETAILS ============ -->
+<section class="reveal">
+  <div class="section-inner">
+    <div class="eyebrow">Той качан, кайда</div>
+    <h2 class="section-title">Майрамга чакырабыз</h2>
+
+    <div class="countdown" id="countdown">
+      <div class="cd-unit"><div class="cd-num" id="cd-days">–</div><div class="cd-label">күн</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-hours">–</div><div class="cd-label">саат</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-min">–</div><div class="cd-label">мүнөт</div></div>
+      <div class="cd-unit"><div class="cd-num" id="cd-sec">–</div><div class="cd-label">секунд</div></div>
+    </div>
+    <div class="cd-done" id="cdDone" style="display:none;">Бүгүн биздин той! 🤍</div>
+
+    <div class="details-grid">
+      <div class="detail-row">
+        <div class="detail-label">Күнү жана убактысы</div>
+        <div class="detail-value">9-октябрь, 2026</div>
+        <div class="detail-sub">Жума күнү · саат 17:00</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">Той залы</div>
+        <div class="detail-value">«Мурас»</div>
+        <div class="detail-sub">Банкет залы, Бишкек ш.</div>
+        <a class="map-btn" href="https://2gis.kg/bishkek/search/%D0%9C%D1%83%D1%80%D0%B0%D1%81%20%D0%B1%D0%B0%D0%BD%D0%BA%D0%B5%D1%82%20%D0%B7%D0%B0%D0%BB%D1%8B" target="_blank" rel="noopener">
+          Картадан көрүү →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAMMA ============ -->
+<section class="story reveal">
+  <div class="section-inner">
+    <div class="eyebrow">Тойдун программасы</div>
+    <h2 class="section-title">Күндүн жүрүшү</h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">17:00</div><div class="tl-text">Коноктордун чогулушу</div></div>
+      <div class="tl-item"><div class="tl-time">17:30</div><div class="tl-text">Жаш жубайлардын салтанаттуу кириши</div></div>
+      <div class="tl-item"><div class="tl-time">18:00</div><div class="tl-text">Той дасторкону, куттуктоолор</div></div>
+      <div class="tl-item"><div class="tl-time">20:00</div><div class="tl-text">Музыка, бий жана оюн-зоок</div></div>
+      <div class="tl-item"><div class="tl-time">22:00</div><div class="tl-text">Тойдун торту жана жыйынтык</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RSVP ============ -->
+<section class="rsvp reveal" id="rsvp">
+  <div class="section-inner">
+    <div class="eyebrow">Катышуу тууралуу</div>
+    <h2 class="section-title">RSVP</h2>
+    <p class="section-body">Сураныч, 25-сентябрга чейин катышаарыңызды биздерге билдирип коюңуз.</p>
+
+    <form class="rsvp-form" id="rsvpForm" novalidate>
+      <div class="field">
+        <label for="fullname">Аты-жөнүңүз</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Мисалы: Жамал Асанова" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label>Тойго келе аласызбы?</label>
+        <div class="radio-group" id="attendGroup">
+          <label class="radio-pill" data-val="yes">
+            <input type="radio" name="attend" value="Ооба, кубаныч менен барам">Ооба, чогуу болобуз
+          </label>
+          <label class="radio-pill" data-val="no">
+            <input type="radio" name="attend" value="Тилекке каршы, боло албайм">Тилекке каршы, боло албайм
+          </label>
+        </div>
+      </div>
+
+      <div class="field guests-field" id="guestsField">
+        <label for="guests">Канча адам менен келесиз? (өзүңүздү кошо)</label>
+        <input type="number" id="guests" name="guests" min="1" max="10" placeholder="Мисалы: 2">
+      </div>
+
+      <div class="field">
+        <label for="wish">Каалоо-тилек (эркин)</label>
+        <textarea id="wish" name="wish" rows="3" placeholder="Жаш жубайларга каалоо-тилегиңиз..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.6.8 2 .9 2.1.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.7.8.3.1.4.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+        WhatsApp аркылуу жооп берүү
+      </button>
+      <div class="form-note">Баскычты бассаңыз, WhatsApp ачылып, даяр билдирүү жиберилет.</div>
+      <div class="success-msg" id="successMsg">Рахмат! WhatsApp ачылды — билдирүүнү жөнөтүүнү аяктаңыз.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  Силерди күтөбүз
+  <span class="small">Адил &amp; Каныкей · 09.10.2026</span>
+  <span class="credit">Created by Mr. Musa</span>
+</footer>
+
+<!-- ============ MUSIC DOCK ============ -->
+<div class="music-dock">
+  <div class="music-panel" id="musicPanel">
+    <div class="music-card">
+      <div class="music-title">Until I Found You</div>
+      <div class="music-artist">Stephen Sanchez</div>
+      <audio id="weddingAudio" src="music.mp3" preload="auto" loop controls></audio>
+    </div>
+  </div>
+  <button class="music-toggle" id="musicToggle" type="button" title="Ырды ойнотуу" aria-label="Ырды ойнотуу">
+    <svg class="disc" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" stroke="#E4C77A" stroke-width="1.3"/>
+      <circle cx="12" cy="12" r="3" fill="#E4C77A"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  // ===== reveal on scroll =====
+  const reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.15});
+    reveals.forEach(el=>io.observe(el));
+  } else {
+    reveals.forEach(el=>el.classList.add('in'));
+  }
+
+  // ===== countdown =====
+  const weddingDate = new Date('2026-10-09T17:00:00+06:00').getTime();
+  const elDays=document.getElementById('cd-days'),
+        elHours=document.getElementById('cd-hours'),
+        elMin=document.getElementById('cd-min'),
+        elSec=document.getElementById('cd-sec'),
+        elGrid=document.getElementById('countdown'),
+        elDone=document.getElementById('cdDone');
+  let timer;
+  function tick(){
+    const diff = weddingDate - Date.now();
+    if(diff <= 0){
+      elGrid.style.display='none';
+      elDone.style.display='block';
+      clearInterval(timer);
+      return;
+    }
+    const d = Math.floor(diff/86400000);
+    const h = Math.floor((diff%86400000)/3600000);
+    const m = Math.floor((diff%3600000)/60000);
+    const s = Math.floor((diff%60000)/1000);
+    elDays.textContent = d;
+    elHours.textContent = String(h).padStart(2,'0');
+    elMin.textContent = String(m).padStart(2,'0');
+    elSec.textContent = String(s).padStart(2,'0');
+  }
+  tick(); timer = setInterval(tick, 1000);
+
+  // ===== attend radio pills =====
+  const pills = document.querySelectorAll('#attendGroup .radio-pill');
+  const guestsField = document.getElementById('guestsField');
+  function syncPills(){
+    pills.forEach(p=>{
+      const input = p.querySelector('input');
+      p.classList.toggle('active', input.checked);
+    });
+    const yes = document.querySelector('#attendGroup input[value^="Ооба"]');
+    guestsField.classList.toggle('show', !!(yes && yes.checked));
+  }
+  pills.forEach(p=>{
+    p.addEventListener('click', ()=>{
+      p.querySelector('input').checked = true;
+      syncPills();
+    });
+  });
+  syncPills(); // handle restored state on reload
+
+  // ===== RSVP -> WhatsApp =====
+  const WHATSAPP_NUMBER = '996502706362';
+  const form = document.getElementById('rsvpForm');
+  const successMsg = document.getElementById('successMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('fullname').value.trim();
+    const attendInput = form.querySelector('input[name="attend"]:checked');
+    const guests = document.getElementById('guests').value.trim();
+    const wish = document.getElementById('wish').value.trim();
+    const isYes = attendInput && attendInput.value.startsWith('Ооба');
+
+    if(!name || !attendInput){
+      alert('Сураныч, атыңызды жазып, катышуу-катышпооңузду тандаңыз.');
+      return;
+    }
+    if(isYes && guests){
+      const n = parseInt(guests,10);
+      if(isNaN(n) || n < 1 || n > 10){
+        alert('Адам санын 1ден 10го чейин киргизиңиз.');
+        return;
+      }
+    }
+
+    let lines = [
+      'Ассалому алейкум! Адил менен Каныкейдин тоюна RSVP:',
+      'Аты-жөнү: ' + name,
+      'Жооп: ' + attendInput.value
+    ];
+    if(isYes && guests){ lines.push('Адам саны: ' + guests); }
+    if(wish){ lines.push('Тилек: ' + wish); }
+
+    const text = encodeURIComponent(lines.join('\n'));
+    const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text;
+    window.open(url, '_blank');
+    successMsg.classList.add('show');
+  });
+
+  // ===== music dock =====
+  const musicToggle = document.getElementById('musicToggle');
+  const musicPanel = document.getElementById('musicPanel');
+  const audio = document.getElementById('weddingAudio');
+  const START_AT = 36; // припев начинается на 00:36
+  let startedOnce = false;
+
+  function startFromChorus(){
+    if(startedOnce) return;
+    const seek = ()=>{ try{ audio.currentTime = START_AT; }catch(e){} };
+    if(audio.readyState >= 1){ seek(); }
+    else { audio.addEventListener('loadedmetadata', seek, {once:true}); }
+    startedOnce = true;
+  }
+
+  // запуск музыки по кнопке-диску
+  musicToggle.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const opening = !musicPanel.classList.contains('open');
+    musicPanel.classList.toggle('open');
+    if(opening){
+      startFromChorus();
+      audio.play().catch(()=>{});
+    } else {
+      audio.pause();
+    }
+  });
+
+  // автозапуск при первом касании/клике в любом месте страницы
+  function autoStartOnce(){
+    startFromChorus();
+    audio.play().then(()=>{
+      musicPanel.classList.add('open');
+    }).catch(()=>{ /* если браузер всё равно заблокировал — гость нажмёт диск сам */ });
+    window.removeEventListener('pointerdown', autoStartOnce);
+    window.removeEventListener('touchstart', autoStartOnce);
+    window.removeEventListener('keydown', autoStartOnce);
+    window.removeEventListener('scroll', autoStartOnce);
+  }
+  window.addEventListener('pointerdown', autoStartOnce, {once:true, passive:true});
+  window.addEventListener('touchstart', autoStartOnce, {once:true, passive:true});
+  window.addEventListener('keydown', autoStartOnce, {once:true});
+  window.addEventListener('scroll', autoStartOnce, {once:true, passive:true});
+  // диск крутится, пока музыка играет
+  audio.addEventListener('play',  ()=> musicToggle.classList.add('playing'));
+  audio.addEventListener('pause', ()=> musicToggle.classList.remove('playing'));
+</script>
+
+</body>
+</html>
